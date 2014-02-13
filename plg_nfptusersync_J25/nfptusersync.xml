@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - NFPT Usersync</name>
+	<version>1.2.1</version>
+	<author>Levi Carter</author>
+	<creationDate>March 2013</creationDate>
+	<copyright></copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>tech@mangotreemedia.com</authorEmail>
+	<authorUrl>http://www.mangotreemedia.com</authorUrl>
+	<description>Sync new and updated users from the users_live table into Joomla.</description>
+	<files>
+		<filename plugin="nfptusersync">nfptusersync.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="mainhost" type="text" size="20" default="" label="User Main Database Host" description="users_live host" />
+				<field name="maindb" type="text" size="20" default="" label="User Main Database name" description="users_live database name" />
+				<field name="mainuser" type="text" size="20" default="" label="User Main Connect username" description="users_live database username" />
+				<field name="mainpass" type="password" size="20" default="" label="User Main Connect password" description="users_live database password" />
+				<field name="myupdatefield" type="text" size="20" default="" label="My Site Suffix" description="field suffix for this website in the users_live table (eg: ns)" />
+				<field name="failemail" type="text" size="20" default="" label="Failsafe Email Address" description="email address to notify if there is a problem with the sync."/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
